@@ -1,0 +1,1 @@
+The Sebring Poker Club: Where passion for poker and community spirit come together! Join us in Highlands County, Florida, for thrilling tournaments and the chance to give back. Our Charity Poker Tournaments aren’t just about winning; they’re about making a difference right here in Central Florida. Be part of the action, support local charities, and elevate your game with us!

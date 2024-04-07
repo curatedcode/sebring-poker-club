@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 4rem;
+}
+
+input[type="checkbox"]  {
+	transform: scale(1.3);
+	margin-left: 0.3rem;
+}
+
+.slide-fade-enter-active,
+.slide-fade-exit-active {
+  transition: opacity 0.1s, transform 0.1s;
+}
+.slide-fade-enter,
+.slide-fade-exit-to {
+  transform: translateY(-15px);
+  opacity: 0;
+}
