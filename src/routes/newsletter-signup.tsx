@@ -111,43 +111,44 @@ export default function NewsletterSignUp() {
 	return (
 		<>
 			<PageTitle>Newsletter Sign Up</PageTitle>
-			<main class="grid justify-center p-4">
+			<main class="container md:mx-auto px-2 py-8 md:px-6 grid justify-center font-medium justify-self-center">
 				<img
 					src="/spc-charity-poker-logo.png"
 					alt="Sebring Poker Club Charity Poker Logo"
 					class="w-64 sm:w-80 justify-self-center mb-4"
 					width={320}
-					height={197}
+					height={202}
 				/>
 				<Show when={getIsSubscriptionComplete().success}>
-					<div class="font-medium text-xl gap-2 grid text-center justify-center max-w-96 w-full bg-gray-200 rounded-md p-4">
-						<span>Thank you for subscribing to our newsletter!</span>
+					<div class="gap-2 grid text-center justify-center max-w-sm w-full bg-gray-200 rounded-md p-4">
+						<span class="text-lg font-semibold">
+							Thank you for subscribing!
+						</span>
+						<span>We'll send you an introductory email shortly.</span>
 						<span class="text-sm">
 							* Remember to check you spam folder if you can't find our emails.
 						</span>
 					</div>
 				</Show>
 				<Show when={getPageState() === "Post Submit Error"}>
-					<p class="font-medium text-xl grid gap-1 justify-center text-center max-w-96 w-full bg-gray-200 rounded-md p-4">
+					<p class="text-center max-w-sm w-full bg-gray-200 rounded-md p-4">
 						There was an issue with your subscription. Please try again later.
 					</p>
 				</Show>
 				<Show when={getPageState() === "Awaiting Submit"}>
 					<div
 						id="newsletter-form"
-						class="grid justify-center max-w-96 w-full bg-gray-200 rounded-md p-4 pb-6"
+						class="grid justify-center max-w-sm w-full bg-gray-200 rounded-md p-4 pb-6"
 					>
 						<div class="grid justify-center gap-2 mb-2">
-							<h1 class="text-3xl font-medium justify-self-center">
-								Newsletter
-							</h1>
+							<h1 class="text-2xl font-semibold text-center">Newsletter</h1>
 							<p class="px-1 text-center">
-								Sign up to receive our weekly tournament schedule and any other
+								Sign up to receive our weekly tournament schedule and other
 								important announcements.
 							</p>
 						</div>
 						<form onsubmit={(e) => submitForm(e)}>
-							<div class="my-4 ml-form-formContent">
+							<div class="mb-4 mt-3 ml-form-formContent">
 								<label class="sr-only" for="fields[email]">
 									Email
 								</label>
@@ -160,7 +161,7 @@ export default function NewsletterSignUp() {
 								<span
 									role="alert"
 									aria-live="polite"
-									class="mb-0.5 ml-1 text-base text-site-red"
+									class="m-0.5 ml-1 text-site-red"
 									hidden={getFormEmailError() === ""}
 								>
 									* {getFormEmailError()}
@@ -199,7 +200,7 @@ export default function NewsletterSignUp() {
 										class="mt-1.5"
 									/>
 									<label for="email_agreement">
-										By checking this box, you agree to receive automated emails.
+										By checking this box you agree to receive automated emails.
 									</label>
 								</div>
 							</div>
@@ -208,7 +209,7 @@ export default function NewsletterSignUp() {
 									type="button"
 									disabled
 									onclick={(e) => e.preventDefault()}
-									class="px-5 py-1.5 rounded-md disabled:opacity-80 disabled:cursor-not-allowed w-full bg-black text-white font-medium mt-3 transition-opacity"
+									class="px-5 py-2 rounded-md disabled:opacity-80 disabled:cursor-not-allowed w-full bg-black text-white font-medium mt-3 transition-opacity"
 								>
 									<div
 										class="inline-block size-4 animate-spin rounded-full border-2 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
@@ -227,7 +228,7 @@ export default function NewsletterSignUp() {
 											? "Please complete all form fields."
 											: undefined
 									}
-									class="px-5 py-1.5 rounded-md disabled:opacity-70 disabled:cursor-not-allowed w-full bg-black text-white font-medium mt-3 transition-opacity"
+									class="px-5 py-2 rounded-md disabled:opacity-70 disabled:cursor-not-allowed w-full bg-black text-white font-medium mt-3 transition-opacity"
 								>
 									Submit
 								</button>

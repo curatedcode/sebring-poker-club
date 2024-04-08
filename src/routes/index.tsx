@@ -1,40 +1,66 @@
 import { Title } from "@solidjs/meta";
+import { A } from "@solidjs/router";
 
 export default function Home() {
 	return (
 		<>
 			<Title>Sebring Poker Club</Title>
-			<main class="text-center container mx-auto text-gray-800 px-2 py-6 md:px-6 grid justify-center gap-24 md:gap-32 font-medium">
+			<main class="container md:mx-auto px-2 py-8 md:px-6 grid justify-center gap-48 md:gap-72 font-medium justify-self-center">
+				<div class="flex flex-col gap-3 md:flex-row md:gap-12 mt-4 md:mt-24 max-w-5xl items-center md:justify-between">
+					<div class="relative max-w-lg md:order-last">
+						<img
+							alt="Woman holding Ace and King cards on a poker table."
+							src="/stock/people-playing-poker.jpg"
+							class="rounded shadow-lg shadow-gray-300"
+							width={464}
+							height={310}
+						/>
+						<div class="rounded-md h-full absolute top-0 left-0 bg-black opacity-30" />
+					</div>
+					<div class="flex flex-col gap-3 max-w-lg">
+						<h1 class="text-2xl md:text-3xl md:text-nowrap font-semibold">
+							The premier poker club destination.
+						</h1>
+						<p class="text-pretty">
+							Our love of poker is what brings us all together. Every game is an
+							adventure, and every win is thrilling. Join our group in Highlands
+							county for exciting games and the chance to win it all!
+						</p>
+						<A
+							href="/newsletter-signup"
+							class="px-3 micro:px-16 py-2 place-self-center rounded border border-black border-opacity-20 text-black w-fit bg-site-yellow-brighter mt-4 hover:bg-site-yellow transition-colors md:order-last text-nowrap"
+						>
+							Get in on the action!
+						</A>
+					</div>
+				</div>
 				<div
 					id="about"
-					class="font-medium md:text-xl grid gap-6 max-w-4xl justify-self-center"
+					class="flex flex-col gap-3 md:flex-row md:gap-12 max-w-5xl items-center md:justify-between"
 				>
 					<img
 						alt="Sebring Poker Club Charity Logo"
 						src="/spc-charity-poker-logo.png"
-						class="w-full justify-self-center max-w-96 h-fit"
-						width={384}
-						height={286}
+						class="w-full justify-self-center max-w-lg drop-shadow-charity-logo shadow-red-200"
+						width={464}
+						height={293}
 					/>
-					<p class="text-balance">
-						The Sebring Poker Club: Where passion for poker and community spirit
-						come together! Join us in Highlands County, Florida, for thrilling
-						tournaments and the chance to give back. Our Charity Poker
-						Tournaments aren’t just about winning; they’re about making a
-						difference right here in Central Florida. Be part of the action,
-						support local charities, and elevate your game with us!
+					<p class="-mt-4 max-w-lg text-pretty">
+						Our Charity Poker Tournaments aren’t just about winning; they’re
+						about making a difference right here in our local community. Be part
+						of the action, support local charities, and elevate your game with
+						us!
 					</p>
 				</div>
 				<div
 					id="charities"
-					class="font-medium md:text-xl grid gap-6 max-w-4xl justify-self-center"
+					class="flex flex-col gap-3 md:gap-12 max-w-5xl justify-center items-center"
 				>
-					<p class="text-balance">
-						For over twenty years, we’ve proudly supported a whole host of local
-						charities through the proceeds from our charity tournaments. Explore
-						the charities below to learn more about their impactful work:
-					</p>
-					<div class="flex flex-wrap justify-center gap-6">
+					<h2 class="font-semibold text-lg text-center">
+						Take a moment to explore the charities we support and their
+						incredible work
+					</h2>
+					<div class="flex flex-wrap justify-center gap-6 max-w-3xl">
 						<a
 							href="https://vva.org/"
 							rel="noreferrer"
@@ -137,11 +163,10 @@ export default function Home() {
 						</a>
 					</div>
 				</div>
-				<div
-					id="sponsors"
-					class="font-medium md:text-xl grid gap-6 max-w-4xl justify-self-center"
-				>
-					<p class="text-balance">A heartfelt thank you to our sponsors!</p>
+				<div id="sponsors" class="grid gap-6 max-w-5xl">
+					<h2 class="font-semibold text-lg text-center">
+						A heartfelt thank you to our sponsors!
+					</h2>
 					<div class="flex flex-wrap justify-center items-center gap-6 md:gap-16">
 						<a
 							href="https://www.celebritycruises.com/"
@@ -175,8 +200,12 @@ export default function Home() {
 						</a>
 					</div>
 				</div>
-				<div id="contact" class="text-lg">
-					<p>
+				<div
+					id="contact"
+					class="flex flex-col gap-3 md:gap-12 max-w-5xl justify-center"
+				>
+					<h2 class="font-semibold text-lg text-center">Contact us</h2>
+					<p class="text-center">
 						For any inquires please email{" "}
 						<a
 							href="mailto:contact@sebringpokerclub.com"

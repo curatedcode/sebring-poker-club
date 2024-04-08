@@ -64,8 +64,8 @@ export default function App() {
 						/>
 						<Link rel="mask-icon" href="icon.svg" color="#f7240f" />
 						<Navbar />
-						<div class="min-h-[100dvh] bg-white">
-							<div class="bg-white pb-52">
+						<div class="min-h-[100dvh] bg-white font-sans text-gray-800">
+							<div class="bg-white pb-52 px-3 grid">
 								<Suspense>{props.children}</Suspense>
 							</div>
 						</div>
