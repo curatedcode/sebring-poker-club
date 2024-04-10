@@ -5,7 +5,7 @@ export default function Home() {
 	return (
 		<>
 			<Title>Sebring Poker Club</Title>
-			<main class="container md:mx-auto px-2 py-8 md:px-6 grid justify-center gap-48 md:gap-72 font-medium justify-self-center">
+			<main class="md:mx-auto px-2 py-8 md:px-6 grid justify-center gap-48 md:gap-72 font-medium justify-self-center">
 				<div class="flex flex-col gap-3 md:flex-row md:gap-12 mt-4 md:mt-24 max-w-5xl items-center md:justify-between">
 					<div class="relative max-w-lg md:order-last">
 						<img
@@ -18,7 +18,7 @@ export default function Home() {
 						<div class="rounded-md h-full absolute top-0 left-0 bg-black opacity-30" />
 					</div>
 					<div class="flex flex-col gap-3 max-w-lg">
-						<h1 class="text-2xl md:text-3xl md:text-nowrap font-semibold">
+						<h1 class="text-2xl md:text-3xl md:text-nowrap font-semibold mt-1 capitalize">
 							The premier poker club destination.
 						</h1>
 						<p class="text-pretty">
@@ -28,9 +28,9 @@ export default function Home() {
 						</p>
 						<A
 							href="/newsletter-signup"
-							class="px-3 micro:px-16 py-2 place-self-center rounded border border-black border-opacity-20 text-black w-fit bg-site-yellow-brighter mt-4 hover:bg-site-yellow transition-colors md:order-last text-nowrap"
+							class="px-3 w-full text-center micro:px-16 py-2 place-self-center rounded border border-black border-opacity-20 text-black sm:w-fit bg-site-yellow-brighter mt-4 hover:bg-site-yellow transition-colors md:order-last text-nowrap"
 						>
-							Get in on the action!
+							Join our newsletter!
 						</A>
 					</div>
 				</div>
@@ -45,7 +45,7 @@ export default function Home() {
 						width={464}
 						height={293}
 					/>
-					<p class="-mt-4 max-w-lg text-pretty">
+					<p class="md:-mt-4 max-w-lg text-pretty">
 						Our Charity Poker Tournaments aren’t just about winning; they’re
 						about making a difference right here in our local community. Be part
 						of the action, support local charities, and elevate your game with
