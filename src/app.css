@@ -24,7 +24,7 @@ input[type="checkbox"]  {
 
 .slide-fade-enter-active,
 .slide-fade-exit-active {
-  transition: opacity 0.1s, transform 0.1s;
+  transition: opacity 0.2s, transform 0.2s;
 }
 .slide-fade-enter,
 .slide-fade-exit-to {
